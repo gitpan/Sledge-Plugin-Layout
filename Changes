@@ -1,4 +1,7 @@
 Revision history for Perl extension Sledge::Plugin::Layout
 
+0.02  Fri Mar 24 09:50:07 2006
+        - inheritable
+
 0.01  Sat Nov  5 22:17:07 2005
         - original version

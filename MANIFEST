@@ -2,5 +2,8 @@ Changes
 lib/Sledge/Plugin/Layout.pm
 Makefile.PL
 MANIFEST			This list of files
+META.yml			Module meta-data (added by MakeMaker)
 t/00_compile.t
-META.yml                                 Module meta-data (added by MakeMaker)
+t/01_testpages.t
+t/tmpl/foo.html
+t/tmpl/layout.html

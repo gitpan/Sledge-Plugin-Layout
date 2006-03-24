@@ -2,7 +2,7 @@ package Sledge::Plugin::Layout;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub import {
     my $self = shift;
@@ -14,11 +14,11 @@ sub import {
         my $layout = shift;
 
         $self->register_hook(BEFORE_DISPATCH => sub {
-            my $self   = shift;
+            my $h_self   = shift;
 
-            my $filename = $self->tmpl->{_options}->{filename};
-            $self->tmpl->{_options}->{filename} = $self->guess_filename($layout);
-            $self->tmpl->param(template_for_layout => $filename);
+            my $filename = $h_self->tmpl->{_options}->{filename};
+            $h_self->tmpl->{_options}->{filename} = $self->guess_filename($layout);
+            $h_self->tmpl->param(template_for_layout => $filename);
         });
     };
 }
